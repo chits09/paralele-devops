@@ -1,0 +1,27 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('execute steps paralelly')
+        {
+            parallel{
+                stage('run script in shell')
+                {
+                   steps{ sh 'echo running shell script'}}
+                stage ('run python script')
+                {
+                    steps{sh 'echo python part is running as well'}
+                }
+            }
+         Stage('This step is out of pararllel execution')
+         {
+             steps{
+                 sh 'placing shell and python logs on the server '
+             }
+         }
+
+        }
+
+    }
+}
