@@ -18,7 +18,7 @@ stages
         stage('This step is out of pararllel execution')
          {
          
-             steps{sh 'placing shell and python logs on the server '}}
+             steps{sh 'echo placing shell and python logs on the server '}}
                     
     }
 }
