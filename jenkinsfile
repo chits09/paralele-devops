@@ -15,7 +15,7 @@ stages
                 { steps {sh 'echo python part is running as well'} }
             }
         }
-         Stage('This step is out of pararllel execution')
+        stage('This step is out of pararllel execution')
          {
          
              steps{sh 'placing shell and python logs on the server '}}
